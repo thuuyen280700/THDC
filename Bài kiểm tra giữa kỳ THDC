@@ -1,26 +1,23 @@
 #include <iostream>
 #include <cmath>
-using namespace std;
+using namespace std; 
 int main()
 {
-	double tienvon;
-	double tienkyvong;
-	double nam;
-	double laisuat;
-	double a,b;
-cout<<"Nhap vao so tien von: ";
-cin>>tienvon;
-cout<<"Nhap vao lai suat: ";
-cin>>laisuat;
-cout<<"Nhap vao so tien ky vong: ";
-cin>>tienkyvong;
-laisuat= double(laisuat/100);
-a= double(tienkyvong/tienvon);
+float tienkyvong,tiengui,laisuat,soNam;
+double a,b;
+	cout << "Nhap tien gui ban dau, lai suat va tien ky vong : " << endl;
+		cin>>tiengui>>laisuat>>tienkyvong;
+	cout << "Tien gui ban dau = " << tiengui << endl;
+	cout << "Lai suat = " << laisuat << "%" << endl;
+	cout << "So tien ky vong = " << tienkyvong << endl;
+	laisuat= double(laisuat/100);
+a= double(tienkyvong/tiengui);
 b= double(1+laisuat);
-	if(tienkyvong>tienvon){
-		nam=double(log(a)/log(b));
-		cout<<"So nam can thiet de dat so tien ky vong: "<<nam;
+	if(tienkyvong>tiengui){
+		soNam=double(log(a)/log(b));
+		cout<<"So nam can thiet de dat so tien ky vong: "<<soNam;
 	}else
 	cout<<"khong hop le.";
+
 return 0;
-}
+}	
